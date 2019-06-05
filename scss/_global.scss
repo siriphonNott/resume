@@ -1,0 +1,130 @@
+// Global styling for this template
+
+body {
+  @include body-font;
+  padding-top: 54px;
+  color: $gray-600;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: $sidebar-base-width;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+  // font-weight: 700;
+  text-transform: uppercase;
+  color: $gray-800;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.subheading {
+  text-transform: uppercase;
+  // font-weight: 500;
+  @include heading-font;
+  font-size: 1.5rem;
+}
+
+.social-icons {
+  a {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: $gray-700;
+    color: $white !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+.dev-icons {
+  font-size: 3rem;
+  .list-inline-item i {
+    &:hover {
+      color: $primary;
+    }
+  }
+  span {
+    @include heading-font;
+    font-size: 2rem;
+  }
+}
+
+@mixin dark-img {
+  filter: brightness(100%);
+  box-shadow: 20px 13px 50px rgba(0, 0, 0, 0.2);
+  -webkit-transition: filter 0.5s, box-shadow 0.3s; /* Safari */
+  transition: filter 0.5s, box-shadow 0.3s;
+}
+
+.item-profile {
+  text-align: center;
+  margin: 25px 0 35px 0;
+  cursor: pointer;
+  position: relative;
+
+  .view-message {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    color: #fff;
+    margin-right: -65px;
+    margin-top: -20px;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 10px;
+  }
+ 
+  img {
+    filter: brightness(50%);
+    border: 1px solid #0d1b682e;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    width: 50vw;
+    &:hover {
+     @include dark-img;
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .item-profile {
+    img {
+      width: 90%;
+    }
+  }
+}
