@@ -92,7 +92,7 @@ p.lead {
 
 .item-profile {
   text-align: center;
-  margin: 25px 0 35px 0;
+  margin: 25px 0 40px 0;
   cursor: pointer;
   position: relative;
 
@@ -211,6 +211,14 @@ p.lead {
     top: 20px;
     right: 20px;
     font-size: 52px;
+  }
+  .header-title {
+    h1 {
+      font-size: 4.5rem;
+    }
+    h2 {
+      font-size: 2.5rem!important;
+    }
   }
 }
 @media only screen and (max-width: 1024px){
