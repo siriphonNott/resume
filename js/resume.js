@@ -44,17 +44,20 @@
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
   $('.item-profile img ,.view-message').on('click', function(){
-    var this_, src_, alt_;
+    var  src_, alt_ = '' ;
     if( $(this).prev().hasClass('nolink') ) {
       src_ = $(this).prev().attr('src');
       alt_ = $(this).prev().attr('alt');
+      preview_ = true;
     } else if($(this).hasClass('nolink')){
       src_ = this.src;
       alt_ = this.alt;
     }
-    modal.style.display = "block";
-    modalImg.src = src_
-    captionText.innerHTML = alt_;
+    if(src_ && alt_) {
+      modal.style.display = "block";
+      modalImg.src = src_
+      captionText.innerHTML = alt_;
+    }
   });
 
   // When the user clicks on <span> (x), close the modal
