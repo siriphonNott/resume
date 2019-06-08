@@ -48,7 +48,6 @@
     if( $(this).prev().hasClass('nolink') ) {
       src_ = $(this).prev().attr('src');
       alt_ = $(this).prev().attr('alt');
-      preview_ = true;
     } else if($(this).hasClass('nolink')){
       src_ = this.src;
       alt_ = this.alt;
