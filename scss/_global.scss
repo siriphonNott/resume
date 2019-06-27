@@ -147,6 +147,16 @@ p.lead {
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.img-grayscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  &:hover {
+    -webkit-filter: unset; /* Safari 6.0 - 9.0 */
+    filter: unset;
+  }
+}
+
+
 /* Modal Content (image) */
 .modal-content {
   margin: auto;

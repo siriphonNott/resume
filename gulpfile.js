@@ -75,6 +75,7 @@ function css() {
     .pipe(sass({
       outputStyle: "expanded",
       includePaths: "./node_modules",
+      // style: 'compressed'
     }))
     .on("error", sass.logError)
     .pipe(autoprefixer({
